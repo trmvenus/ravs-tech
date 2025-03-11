@@ -16,7 +16,7 @@ const About = () => {
           </h1>
           <p className="text-white text-[18px] font-normal leading-[28px] tracking-normal mt-5">
             Whether it's finding skilled professionals or developing innovative
-            software, we’re committed to delivering customized solutions that
+            software, we&apos;re committed to delivering customized solutions that
             empower businesses to grow and succeed in a competitive market.
           </p>
           <button className="flex items-center gap-[10px] px-[30px] py-[18px] bg-white text-black rounded-[30px] font-bold text-[18px] w-fit mt-10 cursor-pointer">
