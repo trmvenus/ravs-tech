@@ -1,25 +1,25 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 import ArrowUpRight from "../icons/ArrowUpRight";
 
 const GetTouch = () => {
   const recaptchaRef = useRef<ReCAPTCHA>(null);
-  const [captchaResponse, setCaptchaResponse] = useState<string | null>(null);
 
   const handleRecaptchaChange = (response: string | null) => {
-    setCaptchaResponse(response);
-    console.log(captchaResponse);
+    console.log(response);
   };
   return (
     <div className="bg-rvs-green-dark-light px-[238px] py-[156px] relative flex flex-col justify-center items-center">
       <div className="w-full flex items-center justify-center relative overflow-hidden rounded-b-[30px] z-10">
-        <img
+        <Image
           src="/assets/hero-image.webp"
           alt="get-touch"
+          width={1000}
+          height={1000}
           className={`object-cover w-full h-[50vh] md:h-[34vw] rounded-[20px] md:rounded-[40px] transition-transform duration-500 ease-in-out rounded-b-[30px]`}
         />
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-black/0 to-black/80 pointer-events-none rounded-bottom-[40px] h-[500px] z-0"></div>

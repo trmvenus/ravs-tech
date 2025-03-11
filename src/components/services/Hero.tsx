@@ -20,9 +20,11 @@ const Hero = () => {
         </div>
       </div>
       <div className="w-full flex items-center justify-center relative overflow-hidden mt-20 z-10 rounded-br-[40px]">
-        <img
+        <Image
           src="/assets/service-hero.png"
           alt="hero-image"
+          width={1000}
+          height={1000}
           className={`object-cover w-full h-[50vh] md:h-[34vw] rounded-[20px] md:rounded-[40px] transition-transform duration-500 ease-in-out
           `}
         />

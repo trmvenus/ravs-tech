@@ -9,15 +9,16 @@ const About = () => {
       <div className="relative bg-rvs-green h-[514px] w-full rounded-[20px] py-[57px] px-[60px] flex justify-between z-10">
         <div className="flex flex-col z-10 relative max-w-[515px]">
           <h6 className="font-medium text-white text-base leading-[44px] uppercase">
-            Welcome to ravs technologies
+            Welcome to RAVS Technologies
           </h6>
           <h1 className="font-bold text-white text-[40px] leading-[56px] mt-[10px]">
             Aligning staffing solution <br /> through innovation
           </h1>
           <p className="text-white text-[18px] font-normal leading-[28px] tracking-normal mt-5">
-            Whether it&apos;s finding skilled professionals or developing innovative
-            software, we&apos;re committed to delivering customized solutions that
-            empower businesses to grow and succeed in a competitive market.
+            Whether it&rsquos finding skilled professionals or developing
+            innovative software, we&rsquos committed to delivering customized
+            solutions that empower businesses to grow and succeed in a
+            competitive market.
           </p>
           <button className="flex items-center gap-[10px] px-[30px] py-[18px] bg-white text-black rounded-[30px] font-bold text-[18px] w-fit mt-10 cursor-pointer">
             View services <ArrowUpRight color="black" />

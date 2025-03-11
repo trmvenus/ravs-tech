@@ -49,9 +49,11 @@ const Carousel: React.FC<CarouselProps> = ({
       </button>
 
       <div className="w-full flex items-center justify-center relative overflow-hidden">
-        <img
+        <Image
           src={images[currentIndex]}
           alt={`${alt} ${currentIndex + 1}`}
+          width={1000}
+          height={1000}
           className={`object-cover w-full h-[50vh] md:h-[34vw] rounded-[20px] md:rounded-[40px] transition-transform duration-500 ease-in-out
             ${slideDirection === "right" ? "animate-slide-in-right" : ""}
             ${slideDirection === "left" ? "animate-slide-in-left" : ""}
