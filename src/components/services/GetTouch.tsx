@@ -12,6 +12,7 @@ const GetTouch = () => {
 
   const handleRecaptchaChange = (response: string | null) => {
     setCaptchaResponse(response);
+    console.log(captchaResponse);
   };
   return (
     <div className="bg-rvs-green-dark-light px-[238px] py-[156px] relative flex flex-col justify-center items-center">

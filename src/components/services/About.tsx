@@ -15,7 +15,7 @@ const About = () => {
             Aligning staffing solution <br /> through innovation
           </h1>
           <p className="text-white text-[18px] font-normal leading-[28px] tracking-normal mt-5">
-            Whether it's finding skilled professionals or developing innovative
+            Whether it&apos;s finding skilled professionals or developing innovative
             software, we&apos;re committed to delivering customized solutions that
             empower businesses to grow and succeed in a competitive market.
           </p>
