@@ -26,7 +26,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-20 h-[80px] md:h-[100px] backdrop-blur-[30px] bg-white fixed top-0 left-0 right-0 z-50">
+    <div className="flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-20 h-[80px] md:h-[100px] backdrop-blur-[30px] bg-white fixed top-0 left-0 right-0 z-51">
       <div className="flex items-center gap-2">
         <Image
           src="/assets/logo.svg"

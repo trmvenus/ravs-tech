@@ -39,9 +39,9 @@ const Carousel: React.FC<CarouselProps> = ({
   }
 
   return (
-    <div className="relative flex flex-col md:flex-row items-center w-full mt-[30px] md:mt-[60px] gap-4 md:gap-10 z-10">
+    <div className="relative flex flex-col md:flex-row items-center w-full mt-[30px] md:mt-[60px] gap-4 md:gap-10 z-10 h-fit">
       <button
-        className=" absolute bg-rvs-yellow text-black w-[40px] h-[40px] md:w-[60px] md:h-[60px] flex items-center justify-center rounded-full cursor-pointer p-[12px] md:p-[18px] left-[-100px]"
+        className="absolute bg-rvs-yellow text-black w-[40px] h-[40px] md:w-[60px] md:h-[60px] flex items-center justify-center rounded-full cursor-pointer p-[12px] md:p-[18px] left-2 sm:left-4 md:left-[-20px]  xl:left-[-60px] z-20 top-1/2 transform -translate-y-1/2"
         onClick={goToPrevious}
         aria-label="Previous image"
       >
@@ -54,17 +54,17 @@ const Carousel: React.FC<CarouselProps> = ({
           alt={`${alt} ${currentIndex + 1}`}
           width={1000}
           height={1000}
-          className={`object-cover w-full h-[50vh] md:h-[34vw] rounded-[20px] md:rounded-[40px] transition-transform duration-500 ease-in-out
+          className={`object-contain w-full  transition-transform duration-500 ease-in-out
             ${slideDirection === "right" ? "animate-slide-in-right" : ""}
             ${slideDirection === "left" ? "animate-slide-in-left" : ""}
           `}
           onAnimationEnd={() => setSlideDirection(null)}
         />
-        <Image
+        {/* <Image
           src="/assets/green-polygon-top.svg"
           alt="carousel-image"
           width={158}
-          height={158}
+          height={158}zx
           className="absolute top-0 right-0 w-[80px] h-[80px] md:w-[158px] md:h-[158px]"
         />
         <Image
@@ -84,11 +84,11 @@ const Carousel: React.FC<CarouselProps> = ({
             <br className="hidden md:block" /> on a journey of continuous
             discovery and growth.
           </p>
-        </div>
+        </div> */}
       </div>
 
       <button
-        className="absolute bg-rvs-yellow text-black w-[40px] h-[40px] md:w-[60px] md:h-[60px] flex items-center justify-center rounded-full cursor-pointer p-[12px] md:p-[18px] right-[-100px]"
+        className="absolute bg-rvs-yellow text-black w-[40px] h-[40px] md:w-[60px] md:h-[60px] flex items-center justify-center rounded-full cursor-pointer p-[12px] md:p-[18px] right-2 sm:right-4 md:right-[-20px]  xl:right-[-60px] z-20 top-1/2 transform -translate-y-1/2"
         onClick={goToNext}
         aria-label="Next image"
       >

@@ -47,52 +47,54 @@ const ServiceCarousel = () => {
   };
 
   return (
-    <div className="w-full py-12 relative z-10">
-      <div className="flex flex-row items-center justify-between">
-        <div className="flex flex-row h-[463px] gap-[101px] items-center">
+    <div className="w-full py-6 sm:py-8 md:py-10 lg:py-12 relative z-10">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-10 lg:gap-0">
+        <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 md:gap-10 lg:gap-[101px]">
           <Image
             src={services[currentIndex].image}
             alt={services[currentIndex].title}
             width={463}
             height={463}
-            className={`object-cover rounded-[20px] w-[463px] h-[463px] ${
+            className={`object-cover rounded-[20px] w-full sm:w-[80%] md:w-[70%] lg:w-[25vw] h-auto aspect-square ${
               direction === "up"
                 ? "animate-slide-in-up"
                 : "animate-slide-in-down"
             }`}
           />
-          <div className="flex flex-col w-[480px]">
-            <h3 className="text-[36px] leading-[40px] font-bold">
+          <div className="flex flex-col w-full lg:w-[480px] text-white mt-6 lg:mt-0 text-center lg:text-left">
+            <h3 className="text-2xl sm:text-3xl md:text-[32px] lg:text-[36px] leading-tight lg:leading-[40px] font-bold text-white">
               Crafting Staffing Solutions
             </h3>
-            <p className="text-[18px] leading-[27px] font-normal mt-6">
+            <p className="text-base sm:text-lg md:text-[18px] leading-normal md:leading-[27px] font-normal mt-4 sm:mt-5 md:mt-6 text-white">
               We empower organizations to achieve their goals and scale
               efficiently, minimizing risks by providing top-tier learning and
               technology talent.
             </p>
-            <button className="bg-transparent border-white border-[1px] text-[18px] leading-[27px] font-normal flex items-center gap-2 py-[18px] px-[30px] mt-12 w-fit rounded-[30px] cursor-pointer">
-              Know more <ArrowUpRight color="white" />
-            </button>
+            <div className="flex justify-center lg:justify-start">
+              <button className="bg-transparent border-white border-[1px] text-base sm:text-lg md:text-[18px] leading-normal md:leading-[27px] font-normal flex items-center gap-2 py-3 sm:py-4 md:py-[18px] px-5 sm:px-6 md:px-[30px] mt-8 sm:mt-10 md:mt-12 w-fit rounded-[30px] cursor-pointer text-white">
+                Know more <ArrowUpRight color="white" />
+              </button>
+            </div>
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-row lg:flex-col items-center gap-4 mt-8 lg:mt-0">
           <button
             onClick={nextSlide}
-            className="p-[18px] rounded-full bg-transparent border-white border-[1px] transition-colors cursor-pointer"
+            className="p-3 sm:p-4 md:p-[18px] rounded-full bg-transparent border-white border-[1px] transition-colors cursor-pointer"
             aria-label="Next slide"
           >
             <ChevronUp />
           </button>
 
-          <div className="my-6 flex flex-col items-center">
+          <div className="mx-6 lg:my-6 flex flex-row lg:flex-col items-center">
             {services.map((_, index) => (
               <div
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`cursor-pointer my-1  transition-all ${
+                className={`cursor-pointer mx-1 lg:my-1 transition-all ${
                   index === currentIndex
-                    ? "w-4 h-4 bg-rvs-yellow"
+                    ? "w-3 h-3 sm:w-4 sm:h-4 bg-rvs-yellow"
                     : "w-2 h-2 bg-gray-300 rounded-2xl"
                 }`}
               />
@@ -101,7 +103,7 @@ const ServiceCarousel = () => {
 
           <button
             onClick={prevSlide}
-            className="p-[18px] rounded-full bg-transparent border-white border-[1px] transition-colors cursor-pointer"
+            className="p-3 sm:p-4 md:p-[18px] rounded-full bg-transparent border-white border-[1px] transition-colors cursor-pointer"
             aria-label="Previous slide"
           >
             <ChevronDown />

@@ -8,12 +8,15 @@
   --rvs-green: #04a143;
   --rvs-green-dark: #062a2b;
   --rvs-green-dark-light: #0f7272;
-  --rvs-gray: #EFEFEF;
-  --rvs-blue-light  : #35767A;
+  --rvs-gray: #efefef;
+  --rvs-blue-light: #35767a;
+  --rvs-card-green: #00985c;
+  --rvs-card-cyan: #1e7d83;
+  --rvs-card-green-light: #04b36e;
+  --rvs-card-cyan-dark: #205e62;
 }
 
-
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -25,8 +28,11 @@
   --color-rvs-green-dark-light: var(--rvs-green-dark-light);
   --color-rvs-gray: var(--rvs-gray);
   --color-rvs-blue-light: var(--rvs-blue-light);
+  --color-rvs-card-green: var(--rvs-card-green);
+  --color-rvs-card-cyan: var(--rvs-card-cyan);
+  --color-rvs-card-green-light: var(--rvs-card-green-light);
+  --color-rvs-card-cyan-dark: var(--rvs-card-cyan-dark);
 }
-
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -93,10 +99,4 @@
     line-height: 27px;
     font-weight: 400;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
