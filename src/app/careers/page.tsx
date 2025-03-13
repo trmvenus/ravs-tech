@@ -130,7 +130,7 @@ const CareersPage = () => {
                     type="file"
                     id="resume"
                     className="hidden"
-                    // onChange={handleFileChange}
+                    onChange={handleFileChange}
                   />
 
                   {/* Custom Upload Button */}

@@ -1,19 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 import ArrowUpRight from "../icons/ArrowUpRight";
 
 const GetTouch = () => {
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  // const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
   const [showCaptchaError, setShowCaptchaError] = useState<boolean>(false);
 
-  const handleRecaptchaChange = (response: string | null) => {
-    console.log(response);
-  };
+  // const handleRecaptchaChange = (response: string | null) => {
+  //   console.log(response);
+  // };
 
   const handleSubmit = () => {
     if (!captchaValue) {
@@ -120,7 +120,7 @@ const GetTouch = () => {
                   onChange={handleRecaptchaChange}
                 /> */}
                 <ReCAPTCHA
-                  onChange={(value: any) => {
+                  onChange={(value) => {
                     setCaptchaValue(value);
                     setShowCaptchaError(false);
                   }}
