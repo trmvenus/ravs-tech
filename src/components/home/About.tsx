@@ -21,7 +21,7 @@ const About = () => {
             solutions that empower businesses to grow and succeed in a
             competitive market.
           </p>
-          <button className="flex items-center gap-2 md:gap-[10px] px-5 sm:px-6 md:px-[30px] py-3 sm:py-4 md:py-[18px] bg-white text-black rounded-[30px] font-bold text-sm md:text-[18px] w-fit mt-6 md:mt-10 cursor-pointer">
+          <button className="flex items-center gap-2 md:gap-[10px] px-5 sm:px-6 md:px-[30px] py-3 sm:py-4 md:py-[18px] bg-white hover:bg-white/[90%] text-black rounded-[30px] font-bold text-sm md:text-[18px] w-fit mt-6 md:mt-10 cursor-pointer">
             View services <ArrowUpRight color="black" />
           </button>
         </div>
@@ -84,7 +84,7 @@ const About = () => {
             Join our team of experts. <br className="hidden md:block" /> Create
             innovative solutions.
           </p>
-          <button className="flex items-center gap-2 md:gap-[10px] px-5 sm:px-6 md:px-[30px] py-3 sm:py-4 md:py-[18px] bg-white text-black rounded-[30px] font-bold text-sm md:text-[18px] w-fit mt-4 2xl:mt-10 cursor-pointer">
+          <button className="flex items-center gap-2 md:gap-[10px] px-5 sm:px-6 md:px-[30px] py-3 sm:py-4 md:py-[18px] bg-white hover:bg-white/[90%] text-black rounded-[30px] font-bold text-sm md:text-[18px] w-fit mt-4 2xl:mt-10 cursor-pointer">
             Apply now <ArrowUpRight color="black" />
           </button>
         </div>

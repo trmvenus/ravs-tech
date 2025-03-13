@@ -34,7 +34,7 @@ const Hero = () => {
           <br className="hidden sm:block" />
           Accelerate your growth with technology.
         </p>
-        <button className="bg-rvs-green text-white px-5 sm:px-6 md:px-[30px] py-3 sm:py-4 md:py-[18px] rounded-[30px] flex items-center gap-2 md:gap-[10px] text-center w-fit font-bold cursor-pointer text-sm md:text-base">
+        <button className="bg-rvs-green hover:bg-rvs-green/[70%] text-white px-5 sm:px-6 md:px-[30px] py-3 sm:py-4 md:py-[18px] rounded-[30px] flex items-center gap-2 md:gap-[10px] text-center w-fit font-bold cursor-pointer text-sm md:text-base">
           Know more <ArrowUpRight color="white" />
         </button>
       </div>

@@ -55,7 +55,7 @@ const Header = () => {
       </div>
 
       {/* Desktop CTA Button */}
-      <button className="hidden md:flex items-center gap-[10px] px-[20px] py-[12px] lg:px-[30px] lg:py-[18px] bg-rvs-yellow text-black rounded-[30px] cursor-pointer text-sm lg:text-base">
+      <button className="hidden md:flex items-center gap-[10px] px-[20px] py-[12px] lg:px-[30px] lg:py-[18px] bg-rvs-yellow hover:bg-rvs-yellow-dark text-black rounded-[30px] cursor-pointer text-sm lg:text-base">
         Get in touch{" "}
         <Image
           src="/assets/arrow-up-right.svg"
@@ -105,7 +105,7 @@ const Header = () => {
               {item.label}
             </Link>
           ))}
-          <button className="flex items-center justify-center gap-[10px] px-[20px] py-[12px] bg-rvs-yellow text-black rounded-[30px] cursor-pointer mt-2">
+          <button className="flex items-center justify-center gap-[10px] px-[20px] py-[12px] bg-rvs-yellow hover:bg-rvs-yellow-dark text-black rounded-[30px] cursor-pointer mt-2">
             Get in touch{" "}
             <Image
               src="/assets/arrow-up-right.svg"

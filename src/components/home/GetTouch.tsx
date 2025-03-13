@@ -1,17 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 import ArrowUpRight from "../icons/ArrowUpRight";
 
 const GetTouch = () => {
   const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+  const [showCaptchaError, setShowCaptchaError] = useState<boolean>(false);
 
   const handleRecaptchaChange = (response: string | null) => {
     console.log(response);
   };
+
+  const handleSubmit = () => {
+    if (!captchaValue) {
+      setShowCaptchaError(true);
+    }
+  };
+
   return (
     <div className="flex flex-col items-center">
       <div className="bg-rvs-green-dark-light px-4 md:px-8 lg:px-16 xl:px-[238px] py-12 md:py-20 lg:py-[156px] relative flex flex-col justify-center items-center">
@@ -42,7 +51,7 @@ const GetTouch = () => {
       </div>
 
       <div className="flex flex-col rounded-[20px] w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] max-w-[860px] py-6 sm:py-10 md:py-[76px] px-6 sm:px-8 md:px-12 lg:px-[50px] bg-white relative mt-[-150px] md:mt-[-200px] lg:mt-[-300px] shadow-[0px_5px_30px_0px_rgba(0,0,0,0.1)] z-50">
-        <h1 className="text-black text-3xl md:text-4xl lg:text-[48px] font-bold leading-none">
+        <h1 className="text-black text-3xl md:text-4xl lg:text-[48px] text-center font-bold leading-none">
           Request <span className="text-rvs-green">Consultation</span>
         </h1>
         <div className="form mt-8 md:mt-[60px]">
@@ -105,17 +114,30 @@ const GetTouch = () => {
             </div>
             <div className="flex justify-center mt-4 md:mt-[23px]">
               <div className="scale-[0.6] sm:scale-[0.7] md:scale-75 transform origin-center">
-                <ReCAPTCHA
+                {/* <ReCAPTCHA
                   ref={recaptchaRef}
                   sitekey="6LfC1vAqAAAAACO00Ad4MVD2Jbx5lOngUUObpD7t"
                   onChange={handleRecaptchaChange}
+                /> */}
+                <ReCAPTCHA
+                  onChange={(value: any) => {
+                    setCaptchaValue(value);
+                    setShowCaptchaError(false);
+                  }}
+                  sitekey={"6LfybWcqAAAAAMoxRjGE_N-RCPHE4v-3EdBM3my2"}
                 />
+                {showCaptchaError && (
+                  <p className="text-red-500 text-md font-semibold text-center mt-2">
+                    Please verify that you are not a robot
+                  </p>
+                )}
               </div>
             </div>
             <div className="flex justify-center">
               <button
-                type="submit"
-                className="bg-rvs-yellow text-black py-3 md:py-[18px] px-6 md:px-[58px] rounded-[30px] flex justify-center items-center gap-x-[10px] text-base md:text-[18px] leading-none font-bold cursor-pointer"
+                type="button"
+                onClick={handleSubmit}
+                className="bg-rvs-yellow hover:bg-rvs-yellow-dark text-black py-3 md:py-[18px] px-6 md:px-[58px] rounded-[30px] flex justify-center items-center gap-x-[10px] text-base md:text-[18px] leading-none font-bold cursor-pointer"
               >
                 Submit request
                 <ArrowUpRight color="black" />

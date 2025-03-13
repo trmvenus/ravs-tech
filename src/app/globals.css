@@ -4,6 +4,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --rvs-yellow: #ffd00b;
+  --rvs-yellow-dark: #ffc000;
   --rvs-green-light: #e4ffed;
   --rvs-green: #04a143;
   --rvs-green-dark: #062a2b;
@@ -22,6 +23,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-rvs-yellow: var(--rvs-yellow);
+  --color-rvs-yellow-dark: var(--rvs-yellow-dark);
   --color-rvs-green-light: var(--rvs-green-light);
   --color-rvs-green: var(--rvs-green);
   --color-rvs-green-dark: var(--rvs-green-dark);
@@ -32,6 +34,10 @@
   --color-rvs-card-cyan: var(--rvs-card-cyan);
   --color-rvs-card-green-light: var(--rvs-card-green-light);
   --color-rvs-card-cyan-dark: var(--rvs-card-cyan-dark);
+}
+
+button {
+  transition: background-color 0.3s ease;
 }
 
 @media (prefers-color-scheme: dark) {
